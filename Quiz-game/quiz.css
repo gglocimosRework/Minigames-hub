@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+body {
+  background-color: rgb(25, 25, 25);
+  color: white;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+ cursor: pointer;
+ caret-color: transparent;
+}
+
+p, h1 {
+    user-select: none;
+    pointer-events: none;
+}
+
+.header {
+    background-color: rgb(0, 146, 19);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+    padding: 40px;
+}
+
+a {
+    border-style: none;
+    color: white;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+a:hover {
+    color: rgb(0, 255, 0);
+    text-shadow: 0 0 5px rgb(0, 255, 0);
+}
+
+.quiz-container {
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ row-gap: 35px;
+}
+
+.title {
+  font-size: 45px;
+  font-weight: 1000;
+  color: rgb(5, 238, 255);
+}
+
+.quiz-box {
+  background-color: rgb(35, 35, 35);
+  padding: 25px;
+  border-radius: 12px;
+  width: 85%;
+  height: 400px;
+  text-align: center;
+}
+
+.question {
+  font-size: 55px;
+  margin-bottom: 25px;
+  font-weight: 650;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.answer-btn {
+  padding: 25px 25px;
+  font-size: 35px;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.answer-btn:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.answer-btn:active {
+    transform: scale(0.85);
+}
+
+.answer-btn.correct {
+  background-color: rgb(0, 180, 0);
+  color: white;
+}
+
+.answer-btn.wrong {
+  background-color: rgb(200, 0, 0);
+  color: white;
+}
+
+.next-button {
+  padding: 12px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(0, 200, 220);
+  font-weight: bold;
+  display: none;
+}
+
+.next-button:hover {
+  background-color: rgba(0, 200, 220, 0.85);
+}
+
+.score {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+
+.finished  {
+  position: absolute;
+     top: 40%;
+     left: 26.5%;
+     right: 25%;
+     bottom: auto;
+
+  font-size: 70px;
+  font-weight: bold;
+}

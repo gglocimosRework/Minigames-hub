@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title> Rock Paper Scissors</title>
+    <link rel="stylesheet" href="rock-paper-scissors.css">
+    <link rel="stylesheet" href="rock-paper-scissors-mobile.css">
+
+</head>
+<body>
+     <header class="header">
+        <a href="../minigames-hub/index.html" class="back-button">Minigames Hub</a>
+        <a href="../flip-a-coin-game/flip-coin.html" class="game-link-2">Flip a Coin</a>
+        <a href="../Quiz-game/quiz.html" class="game-link-1">Quiz Game</a>
+     </header>
+    
+    <main class="game-container"> 
+        <p class="title">
+           Rock <span class="wide">Paper</span>Scissors
+        </p>
+         
+        <div class="buttons-container">
+
+        <button onclick=" 
+            playGame('rock');
+        " class="move-button"><img src="rock-emoji.png" class="move-icon"></button>
+        <button onclick="
+         playGame('paper');
+        
+        " class="move-button"><img src="paper-emoji.png" class="move-icon"></button>
+
+        <button onclick=" 
+          playGame('scissors');
+        " class="move-button"><img src="scissors-emoji.png" class="move-icon"></button>
+        </div>
+
+        <p class="js-result result"></p>
+        <p class="js-moves"></p>
+        <p class="js-score score"> </p>
+
+        <button onclick="
+            score.wins = 0;
+            score.losses = 0;
+            score.ties = 0; 
+            updateScoreElement(), resetGame();" class="reset-score-button">
+            Reset Score
+        </button>
+    </main>    
+        <script src="rock-paper-scissors.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Flip a coin minigame</title>
+    <link rel="stylesheet" href="flip-coin.css"></link>
+    <link rel="stylesheet" href="flip-coin-mobile.css"></link>
+</head>
+<html> 
+<body>
+    <header class="header">
+        <a href="../minigames-hub/index.html" class="back-button">Minigames Hub</a>
+        <a href="../Rock-Paper-Scissors-game/rock-paper-scissors.html" class="game-link-2">Rock, Paper Scissors</a>
+        <a href="../Quiz-game/quiz.html" class="game-link-1">Quiz Game</a>
+     </header>
+
+  <main class="game">
+    <h1 class="title">Flip a Coin</h1>
+
+ 
+    <div class="coin-container">
+      <img src="heads.png" class="coin" id="coinImage" alt="coin">
+    </div>
+
+    <p class="result" id="resultText"> Click "Heads" or "Tails" to play! </p>
+    <p class="score" id="score"></p>
+
+    <div class="buttons">
+
+     <button  class="first-button" onclick="playGame('heads')">Heads</button>
+     <button  class="second-button" onclick="playGame('tails')">Tails</button>
+
+    </div>
+
+    <button class="reset-button" 
+     onclick="resetScore()">
+     
+      Reset Score
+
+    </button>
+ </main>
+
+  <script src="flip-coin.js"> </script>
+</body>
+</html>

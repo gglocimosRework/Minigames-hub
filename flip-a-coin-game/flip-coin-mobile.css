@@ -1,0 +1,80 @@
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .header a {
+    font-size: 22px;
+  }
+
+  .title {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .game {
+    margin-top: 20px;
+    row-gap: 18px;
+  }
+
+  .coin {
+    width: 160px;
+    height: 160px;
+  }
+
+  .result {
+    font-size: 18px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .first-button,
+  .second-button {
+    font-size: 18px;
+    padding: 14px 0;
+    width: 70%;
+    max-width: 260px;
+    margin: 0;
+  }
+
+  .reset-button {
+    font-size: 20px;
+    padding: 12px 0;
+    width: 70%;
+    max-width: 260px;
+    margin: 10px 0;
+  }
+}
+@media (max-width: 480px) {
+  .header a {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .coin {
+    width: 140px;
+    height: 140px;
+  }
+
+  .result {
+    font-size: 16px;
+  }
+
+  .first-button,
+  .second-button,
+  .reset-button {
+    font-size: 16px;
+  }
+}

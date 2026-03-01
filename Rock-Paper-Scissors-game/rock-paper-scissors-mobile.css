@@ -1,0 +1,87 @@
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .header a {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .game-container {
+    row-gap: 15px;
+    min-height: auto;
+    padding: 20px 0;
+  }
+
+  .title {
+    font-size: 22px;
+    word-spacing: normal;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .wide {
+    margin: 0;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .move-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  .move-icon {
+    height: 45px;
+  }
+
+  .result {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .score {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .reset-score-button {
+    font-size: 16px;
+    padding: 12px 22px;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .header a {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .move-button {
+    width: 90px;
+    height: 90px;
+  }
+
+  .move-icon {
+    height: 40px;
+  }
+
+  .result {
+    font-size: 20px;
+  }
+
+  .score {
+    font-size: 15px;
+  }
+}
