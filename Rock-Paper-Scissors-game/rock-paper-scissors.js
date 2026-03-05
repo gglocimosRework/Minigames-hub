@@ -15,7 +15,43 @@
 
             document.querySelector('.js-moves').innerHTML = '';
           }
-        
+          
+          let isAutoPlaying = false;
+          let intervalId;
+
+        function autoPlay() {
+            
+            if (!isAutoPlaying) {
+                intervalId = setInterval(() => {
+                     const playerMove = pickComputerMove();
+                     playGame(playerMove);
+                }, 1050);
+                isAutoPlaying = true;
+
+            } else {
+                clearInterval(intervalId);
+                isAutoPlaying = false;
+            }
+        };
+         
+         
+     
+        document.querySelector('.js-move-rock-btn').addEventListener('click', () => {
+            playGame('rock');
+        });
+
+         
+
+        document.querySelector('.js-move-paper-btn').addEventListener('click', () => {
+            playGame('paper');
+        });
+
+     
+
+        document.querySelector('.js-move-scissors-btn').addEventListener('click', () => {
+            playGame('scissors');
+        });
+
         function playGame(playerMove) {
          const computerMove = pickComputerMove();
             
@@ -25,16 +61,16 @@
             if (computerMove === 'rock') {
                 result = 'You lose.';
             } else if (computerMove === 'paper') 
-            { result = 'You win'; } else if (computerMove === 'scissors') { result = 'Tie.'; }
+            { result = 'You win.'; } else if (computerMove === 'scissors') { result = 'Tie.'; }
              }else if (playerMove === 'paper') {
                 if (computerMove === 'rock') {
-                    result = 'You win';
-                } else if (computerMove === 'paper') { result = 'Tie'; } 
+                    result = 'You win.';
+                } else if (computerMove === 'paper') { result = 'Tie.'; } 
                 else if (computerMove === 'scissors') { result = 'You lose.'; }
             } else if(playerMove === 'rock') {
             if (computerMove === 'rock') {
                 result = 'Tie.';
-            } else if (computerMove === 'paper') { result = 'You Lose'; 
+            } else if (computerMove === 'paper') { result = 'You lose.'; 
 
             } else if (computerMove === 'scissors') { result = 'You win.'; }
         } 
@@ -46,7 +82,7 @@
             }
             updateScoreElement();
             
-            document.querySelector('.js-result').innerHTML = result;
+         document.querySelector('.js-result').innerHTML = result;
 
          document.querySelector('.js-moves').innerHTML 
             = `You choose:

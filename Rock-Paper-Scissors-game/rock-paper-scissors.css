@@ -10,6 +10,15 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+img, button {
+    caret-color: transparent;
+}
+
+p, h1 {
+    user-select: none;
+    pointer-events: none;
+}
+
 .header {
     background-color: rgb(0, 146, 19);
     display: flex;
@@ -71,7 +80,7 @@ a:hover {
     border-radius: 60px;
 }
 
-.move-button, .reset-score-button {
+.move-button, .reset-score-button, .auto-play-button {
  cursor: pointer;
 }
 
@@ -87,7 +96,7 @@ a:hover {
  font-weight: 500;
 }
 
-.reset-score-button {
+.reset-score-button, .auto-play-button {
     background-color: rgb(255, 98, 7);
     color: white;
     border: none;
@@ -96,3 +105,20 @@ a:hover {
     font-weight: bold;
     padding: 15px 25px;
 }
+
+.auto-play-button {
+    margin-left: 10px;
+    padding: 16px 36px;
+}
+
+.reset-score-button:hover, .auto-play-button:hover {
+    background-color: rgb(214, 101, 3);
+    text-shadow: 0 0 5px rgb(214, 101, 3);
+}
+
+.reset-score-button:active, .auto-play-button:active {
+    transform: scale(0.85);
+    background-color: rgb(192, 91, 3);
+    text-shadow: 0 0 5px rgb(192, 91, 3);
+}
+
