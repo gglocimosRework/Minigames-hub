@@ -22,14 +22,9 @@
         <div class="buttons-container">
 
         <button class="move-button js-move-rock-btn"><img src="rock-emoji.png" class="move-icon"></button>
-        <button onclick="
-         playGame('paper');
-        
-        " class="move-button js-move-paper-btn"><img src="paper-emoji.png" class="move-icon"></button>
+        <button class="move-button js-move-paper-btn"><img src="paper-emoji.png" class="move-icon"></button>
 
-        <button onclick=" 
-          playGame('scissors');
-        " class="move-button js-move-scissors-btn"><img src="scissors-emoji.png" class="move-icon"></button>
+        <button class="move-button js-move-scissors-btn"><img src="scissors-emoji.png" class="move-icon"></button>
         </div>
 
         <p class="js-result result"></p>
@@ -37,11 +32,7 @@
         <p class="js-score score"> </p>
         
         <div> 
-            <button onclick="
-                score.wins = 0;
-                score.losses = 0;
-                score.ties = 0; 
-                updateScoreElement(), resetGame();" class="reset-score-button">
+            <button class="reset-score-button js-reset-btn">
                 Reset Score
             </button>
 
@@ -49,6 +40,12 @@
                 Auto Play
             </button>
         </div>
+
+            <div class="confirm-reset js-confirm-reset" style="display: none">
+                <p>Are you sure you want to reset?</p>
+                <button class="confirm-yes js-confirm-yes">Yes</button>
+                <button class="confirm-no js-confirm-no">No</button>
+            </div>
     </main>    
         <script src="rock-paper-scissors.js"></script>
 </body>

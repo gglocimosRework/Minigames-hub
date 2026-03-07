@@ -1,10 +1,11 @@
- const score = {
-            wins: 0,
-            losses: 0,
-            ties:0
-         };
+    const autoPlayButton = document.querySelector('.auto-play-button');
+    
+    const score = {
+                wins: 0,
+                losses: 0,
+                ties:0
+            };
 
-          
          updateScoreElement();
 
          function resetGame() {
@@ -27,10 +28,11 @@
                      playGame(playerMove);
                 }, 1050);
                 isAutoPlaying = true;
-
+                autoPlayButton.innerHTML = 'Stop Auto Play';
             } else {
                 clearInterval(intervalId);
                 isAutoPlaying = false;
+                autoPlayButton.innerHTML = 'Auto Play';
             }
         };
          
@@ -96,14 +98,11 @@
              function updateScoreElement () {
                  document.querySelector('.js-score').innerHTML = 
            ` Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
-           
-
-
-
              }
+
             function pickComputerMove() {
                 
-                const randomNumber = Math.random()
+                const randomNumber = Math.random();
 
                 let computerMove = '';
 
@@ -116,3 +115,21 @@
 
               return computerMove;
             }
+
+            const resetButton = document.querySelector('.js-reset-btn');
+            const confirmBox = document.querySelector('.js-confirm-reset');
+            const confirmYes = document.querySelector('.js-confirm-yes');
+            const confirmNo = document.querySelector('.js-confirm-no');
+
+            resetButton.addEventListener('click', () => {
+            confirmBox.style.display = 'block';
+            });
+
+            confirmYes.addEventListener('click', () => {
+            resetGame();
+            confirmBox.style.display = 'none';
+            });
+
+            confirmNo.addEventListener('click', () => {
+            confirmBox.style.display = 'none';
+            });
