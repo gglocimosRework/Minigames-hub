@@ -58,6 +58,48 @@
     padding: 12px 22px;
     margin-top: 10px;
   }
+
+  .auto-play-button {
+    font-size: 16px;
+    padding: 12px 22px;
+    margin-top: 10px;
+  }
+
+  .confirm-reset {
+    text-align: center;
+  }
+
+  .confirm-reset p {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .confirm-reset button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 10px;
+  }
+
+  .confirm-reset .confirm-yes, .confirm-reset .confirm-no {
+    background-color: rgb(255, 98, 7);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+  }
+
+  .confirm-reset .confirm-yes:hover, .confirm-reset .confirm-no:hover {
+    background-color: rgb(214, 101, 3);
+    text-shadow: 0 0 5px rgb(214, 101, 3);
+    box-shadow: 0px 0px 1.5px rgb(214, 101, 3);
+  }
+
+  .confirm-reset .confirm-yes:active, .confirm-reset .confirm-no:active {
+    transform: scale(0.85);
+    background-color: rgb(192, 91, 3);
+    text-shadow: 0 0 5px rgb(192, 91, 3);
+    box-shadow: 0px 0px 1.5px rgb(192, 91, 3);
+  }
 }
 @media (max-width: 480px) {
   .header a {
