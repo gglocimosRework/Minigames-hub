@@ -33,12 +33,17 @@
 
     </div>
 
-    <button class="reset-button" 
-     onclick="resetScore()">
+    <button class="reset-button js-reset-btn">
      
       Reset Score
 
     </button>
+
+    <div class="confirm-reset js-confirm-reset" style="display: none">
+      <p>Are you sure you want to reset?</p>
+      <button class="confirm-yes js-confirm-yes">Yes</button>
+      <button class="confirm-no js-confirm-no">No</button>
+    </div>
  </main>
 
   <script src="flip-coin.js"> </script>

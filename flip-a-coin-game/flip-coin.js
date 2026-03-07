@@ -15,7 +15,7 @@ function playGame (playerChoice) {
     if (coinResult < 0.5) {
      result = 'heads'
      coinImage.src = 'heads.png'
-    } else if (coinResult > 0.5) {
+    } else {
         result = 'tails'
         coinImage.src = 'tails.png'
     }
@@ -45,8 +45,27 @@ function resetScore() {
 
   localStorage.setItem('flipCoinScore', JSON.stringify(score));
   updateScoreElement();
+
   document.getElementById('resultText').textContent = 'Click "Heads" or "Tails" to play!';
 };
+
+const resetButton = document.querySelector('.js-reset-btn');
+const confirmBox = document.querySelector('.js-confirm-reset');
+const confirmYes = document.querySelector('.js-confirm-yes');
+const confirmNo = document.querySelector('.js-confirm-no');
+
+resetButton.addEventListener('click', () => {
+  confirmBox.style.display = 'block';
+});
+
+  confirmYes.addEventListener('click', () => {
+  resetScore();
+  confirmBox.style.display = 'none';
+});
+
+  confirmNo.addEventListener('click', () => {
+  confirmBox.style.display = 'none';
+});
 
 
 
